@@ -1,0 +1,28 @@
+# 🍃 Spring Learning Journal
+
+Welcome to my daily progress log! I am focusing on mastering Java backend development to build high-performance systems and dynamic **Admin Dashboards**.
+
+## 🎯 The Goal
+To show up every day for 100 days, deep-dive into the Spring ecosystem, and document the technical logic behind modern web applications.
+
+---
+
+## 📅 Daily Log
+
+### Day 1: January 8, 2026
+**Today's Progress:** * Officially launched the **#100DaysOfCode** challenge.
+* Initialized the `Spring-Learning-Journal` repository to track daily attendance.
+* Researched the **Spring Ecosystem** and how it handles data flow to administrative interfaces.
+
+**Technical Deep Dive: The Spring "Big Three"**
+Today I learned that "Spring" is an umbrella for several powerful tools:
+1. **Spring Framework:** The foundation (Dependency Injection & IoC).
+2. **Spring Boot:** The "Accelerator" that lets us start apps instantly without complex XML configurations.
+3. **Spring Data JPA:** The bridge that allows our Java code to talk to databases effortlessly.
+
+**Why this matters for Admin Pages:**
+To update an Admin page in real-time, the backend needs a robust way to handle requests. Spring Boot’s auto-configuration ensures that the connection between the user’s data and the admin’s view is fast and secure.
+
+**Status:** ✅ Day 1 Complete!
+---
+*“Code is like humor. When you have to explain it, it’s bad.” – Cory House*

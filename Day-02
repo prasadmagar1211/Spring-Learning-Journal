@@ -1,0 +1,18 @@
+# Day 2: The Heart of Spring - Inversion of Control (IoC)
+
+Today I learned about the foundational concept that makes the Spring Framework so powerful: **Inversion of Control (IoC)**.
+
+### 🧩 What is IoC?
+In traditional programming, the developer is responsible for creating and managing objects. In Spring, we hand over that control to the **Spring Container**. 
+
+* **The Analogy:** Instead of you going to the kitchen to cook (Traditional), you go to a restaurant and order a meal (IoC). You don't care how the meal is made; you just get the result.
+
+### 🏗️ How it Works:
+1. **The Bean:** In Spring, objects are managed by the framework and are called "Beans."
+2. **The Container:** Spring keeps an "Application Context" which acts as a container where all these Beans live.
+3. **Dependency Injection (DI):** When one part of your app needs another, Spring "injects" it automatically from the container.
+
+### 💻 Why it matters:
+IoC allows an application to stay "decoupled." You can change one part of the system or the data processing logic without having to rewrite the entire interface, because Spring manages the connections between the different layers automatically.
+
+**Status:** ✅ Day 2 Attendance Marked.

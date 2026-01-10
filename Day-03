@@ -1,0 +1,20 @@
+# Day 3: Dependency Injection (DI) - Providing the Tools
+
+Building on the concept of Inversion of Control (IoC), today I focused on **Dependency Injection (DI)**. This is the actual process Spring uses to deliver objects to the parts of the application that need them.
+
+### 💉 What is Dependency Injection?
+If IoC is the *concept* of handing over control, then DI is the *action* of the framework providing dependencies. 
+
+Instead of a class creating its own objects (hardcoding), the dependencies are "injected" from the outside (by the Spring Container).
+
+### 🛠️ Common Ways to Inject Dependencies:
+1. **Constructor Injection:** (Most Recommended) Dependencies are provided through the class constructor. This makes the code more robust and easier to test.
+2. **Setter Injection:** Dependencies are provided through setter methods after the object is created.
+3. **Field Injection:** Using the `@Autowired` annotation directly on a variable.
+
+### 📊 Why use DI?
+* **Loose Coupling:** Classes don't need to know how their dependencies are created.
+* **Maintainability:** You can swap one component for another without changing the code that uses it.
+* **Testability:** It is much easier to mock dependencies for unit testing.
+
+  **Status:** ✅ Day 3 Completed. !

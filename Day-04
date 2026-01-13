@@ -1,0 +1,15 @@
+# Day 4: The Spring Bean Lifecycle - Birth to Death
+
+Today I explored the specific stages a Bean goes through within the Spring Container. Understanding this "Birth to Death" cycle is essential for resource management.
+
+### 🔄 The Lifecycle Stages:
+1. **Instantiation:** The object is created.
+2. **Dependency Injection:** Spring populates the properties.
+3. **Initialization:** Custom logic is executed (often via `@PostConstruct`).
+4. **Active State:** The Bean is ready for use by the application.
+5. **Destruction:** Cleanup is performed before the application context closes (often via `@PreDestroy`).
+
+### ⚙️ Why it matters:
+This lifecycle allows for automated resource handling—like opening a database connection when a bean starts and ensuring it closes properly when the app shuts down—keeping the system efficient.
+
+**Status:** ✅ Day 4 Attendance Marked.

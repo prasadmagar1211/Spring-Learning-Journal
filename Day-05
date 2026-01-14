@@ -1,0 +1,17 @@
+# Day 5: Spring Boot Starters - Simplifying Dependencies
+
+Today I explored **Spring Boot Starters**, which are a set of convenient dependency descriptors that can be included in an application.
+
+### 📦 The Concept
+Instead of manually searching for and adding multiple library versions that work together, Starters provide a "one-stop shop" for all the related technologies needed for a specific feature.
+
+### 🛠️ Key Starters Explored:
+1. **spring-boot-starter-web:** Used for building web applications, including RESTful services using Spring MVC.
+2. **spring-boot-starter-data-jpa:** Connects the application to SQL databases using Hibernate.
+3. **spring-boot-starter-security:** Automatically adds authentication and authorization layers.
+4. **spring-boot-starter-test:** Includes libraries like JUnit and Mockito for testing.
+
+### ⚙️ Why it matters:
+Starters eliminate "Dependency Hell" by ensuring that all libraries are compatible with each other out of the box. This reduces configuration time and allows for a faster transition from setup to actual coding.
+
+**Status:** ✅ Day 5 Attendance Marked.

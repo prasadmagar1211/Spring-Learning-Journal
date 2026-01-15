@@ -1,0 +1,17 @@
+# Day 6: Spring Boot Auto-Configuration - The "Magic" Explained
+
+Today I studied **Auto-Configuration**, the feature that allows Spring Boot to automatically configure an application based on the dependencies added to the project.
+
+### 🪄 How it Works
+Spring Boot looks at the **Classpath** (the libraries available in the project). If it sees a specific library, it assumes you want to use it and sets up the default configuration for you.
+
+* **Example:** If `spring-boot-starter-web` is on the classpath, Spring Boot automatically configures an embedded Tomcat server and Spring MVC.
+
+### 🛠️ Key Components:
+1. **@SpringBootApplication:** This single annotation includes `@EnableAutoConfiguration`, which triggers the scanning of dependencies.
+2. **Conditional Annotations:** Spring Boot uses logic like `@ConditionalOnClass` or `@ConditionalOnMissingBean` to decide whether to create a configuration. It only configures what is actually needed.
+
+### ⚙️ Why it matters:
+It removes the need for hundreds of lines of manual XML or Java configuration. It follows the principle of **"Opinionated Defaults,"** meaning it provides a sensible starting setup that you can override only when necessary.
+
+**Status:** ✅ Day 6 Attendance Marked.

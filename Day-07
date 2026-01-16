@@ -1,0 +1,19 @@
+# Day 7: Externalized Configuration - application.properties & YAML
+
+Today I learned how to customize and override Spring Boot's default behavior using external configuration files.
+
+### ⚙️ The Configuration Files
+Spring Boot allows us to manage settings without changing the Java code. The two most common formats are:
+1. **application.properties:** A simple "key=value" format.
+2. **application.yml (YAML):** A hierarchical format that is more readable for complex settings.
+
+### 🛠️ Common Configurations:
+* **Server Port:** Changing the default port (e.g., `server.port=8081`).
+* **Database Connection:** Setting up the URL, username, and password for the data source.
+* **Logging:** Controlling the level of detail in the console (INFO, DEBUG, ERROR).
+* **Custom Properties:** Creating own variables using `@Value` to inject them into Java classes.
+
+### 📊 Why it matters:
+Externalizing configuration means you can use the same application code in different environments (Development, Testing, Production) simply by changing the properties file. It keeps the code clean and the sensitive data (like passwords) outside of the main logic.
+
+**Status:** ✅ Day 7 Attendance Marked.

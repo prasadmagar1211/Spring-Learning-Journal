@@ -1,5 +1,5 @@
 # Day 3: Dependency Injection (DI) - Providing the Tools
-
+ 
 Building on the concept of Inversion of Control (IoC), today I focused on **Dependency Injection (DI)**. This is the actual process Spring uses to deliver objects to the parts of the application that need them.
 
 ### 💉 What is Dependency Injection?

@@ -1,0 +1,22 @@
+# Day 8: Spring MVC - How Web Requests Flow
+
+Today I started exploring **Spring MVC**, the framework used to build web applications and RESTful services.
+
+### 🛣️ The Request Journey
+Spring MVC follows a specific pattern to handle every incoming request:
+
+1. **DispatcherServlet:** The "Front Controller" that receives the initial request.
+2. **Handler Mapping:** DispatcherServlet consults this to find which Controller should handle the request.
+3. **Controller:** Processes the request, performs business logic, and returns data (the Model).
+4. **View Resolver:** (For traditional web apps) Decides which page/template to show.
+5. **Response:** The final data or HTML page is sent back to the user.
+
+### 🏗️ The Three Pillars:
+* **Model:** The data of the application (e.g., User info, Product list).
+* **View:** The user interface (HTML, JSON response).
+* **Controller:** The brain that connects the Model and the View.
+
+### ⚙️ Why it matters:
+This separation of concerns makes the code much easier to maintain. You can change how data is displayed (the View) without ever touching the logic of how that data is calculated (the Controller).
+
+**Status:** ✅ Day 8 Attendance Marked.

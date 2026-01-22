@@ -1,0 +1,22 @@
+# Day 9: Building Endpoints with Spring Annotations
+
+Today I learned how to use specific annotations to create RESTful web services and handle different types of HTTP requests.
+
+### 🛠️ Key Web Annotations:
+1. **@RestController:** Combines `@Controller` and `@ResponseBody`. it tells Spring that this class will handle web requests and return data (like JSON) directly to the user.
+2. **@RequestMapping:** The parent annotation used to map web requests to specific handler classes or methods.
+3. **HTTP Verb Annotations:** Specialized shortcuts for different actions:
+    * `@GetMapping`: To fetch data.
+    * `@PostMapping`: To create new data.
+    * `@PutMapping`: To update existing data.
+    * `@DeleteMapping`: To remove data.
+
+### 📥 Handling Input:
+* **@PathVariable:** Used to extract values directly from the URL (e.g., `/users/{id}`).
+* **@RequestParam:** Used to extract query parameters from the URL (e.g., `/search?name=java`).
+* **@RequestBody:** Used to convert the incoming JSON body into a Java object.
+
+### ⚙️ Why it matters:
+These annotations allow us to write clean, readable code that clearly defines the "API Contract." It makes it easy for other developers (or frontend frameworks) to know exactly how to communicate with our backend.
+
+**Status:** ✅ Day 9 Attendance Marked.

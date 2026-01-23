@@ -1,0 +1,20 @@
+# Day 10: Spring Data JPA - Simplifying the Data Layer
+
+Today I explored **Spring Data JPA**, which significantly reduces the amount of boilerplate code required to interact with relational databases.
+
+### 🏛️ The Core Concepts
+Spring Data JPA sits on top of Hibernate and uses the Java Persistence API (JPA) to map Java objects to database tables.
+
+1. **@Entity:** This annotation tells Spring that a Java class represents a table in the database.
+2. **@Id:** Marks the primary key of the entity.
+3. **Repository Interface:** By extending `JpaRepository`, Spring automatically provides CRUD (Create, Read, Update, Delete) operations without writing a single SQL query.
+
+### 🔍 Query Methods
+One of the "coolest" features is **Derived Query Methods**. You can simply name a method in your interface, and Spring generates the SQL for you:
+* `findByLastName(String lastName)` -> Generates: `SELECT * FROM users WHERE last_name = ?`
+* `findByEmailContaining(String domain)` -> Generates a `LIKE` query.
+
+### ⚙️ Why it matters:
+It allows developers to focus on business logic rather than writing repetitive SQL or JDBC code. It makes the data layer highly readable and easy to maintain.
+
+**Status:** ✅ Day 10 Attendance Marked.

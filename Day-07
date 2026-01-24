@@ -1,4 +1,4 @@
-# Day 7: Externalized Configuration - application.properties & YAML
+# Day 7: Externalized Configuration - application.properties & YAML 
 
 Today I learned how to customize and override Spring Boot's default behavior using external configuration files.
 

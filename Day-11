@@ -1,0 +1,16 @@
+# Day 11: The Repository Pattern - Abstracting Data Access
+
+Today I dived deeper into the **Repository Pattern**, which acts as a bridge between the domain and data mapping layers using domain interfaces.
+
+### 🏗️ How it Works
+In Spring, we don't write implementation classes for our data access. Instead, we create an interface that extends `JpaRepository<Entity, IdType>`.
+
+1. **Abstraction:** The application logic doesn't care if the data is in MySQL, PostgreSQL, or an In-memory database. 
+2. **Built-in Methods:** We get `save()`, `findAll()`, `findById()`, and `deleteById()` automatically.
+3. **Custom Queries:** If the built-in methods aren't enough, we can use the `@Query` annotation to write JPQL (Java Persistence Query Language).
+
+### ⚙️ Why it matters:
+This pattern keeps the business logic decoupled from the data access logic. It makes the code cleaner, 
+easier to test with mocks, and allows for easy swapping of database technologies in the future.
+
+**Status:** ✅ Day 11 Attendance Marked.

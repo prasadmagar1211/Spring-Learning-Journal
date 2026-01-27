@@ -1,0 +1,17 @@
+# Day 12: The Service Layer - Organizing Business Logic
+
+Today I learned about the **Service Layer**, the middleman that sits between the Controller and the Repository.
+
+### 🧠 The Role of the Service Layer
+While the Controller handles HTTP requests and the Repository handles database operations, the Service layer contains the "Business Logic."
+
+1. **@Service:** This annotation marks a class as a Service, making it a Spring Bean that can be injected into Controllers.
+2. **Transaction Management:** Services are where we typically use `@Transactional` to ensure that a series of database operations either all succeed or all fail together.
+3. **Logic Consolidation:** If a task requires calling multiple Repositories or performing complex calculations, that logic stays here.
+
+### ⚙️ Why it matters:
+* **Reusability:** Multiple Controllers can use the same Service logic.
+* **Separation of Concerns:** It prevents our Controllers from becoming "fat" and hard to read.
+* **Clean Code:** It makes the application much easier to unit test because we can test the logic without worrying about web or database details.
+
+**Status:** ✅ Day 12 Attendance Marked.

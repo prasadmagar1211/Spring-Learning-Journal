@@ -1,0 +1,17 @@
+# Day 13: Global Exception Handling
+
+Today I learned how to handle errors gracefully across the entire application using a centralized approach.
+
+### 🛡️ The Error Handling Strategy
+Instead of using `try-catch` blocks everywhere, Spring provides powerful annotations to manage exceptions globally.
+
+1. **@ControllerAdvice:** A specialized interceptor that allows us to handle exceptions across all controllers in one place.
+2. **@ExceptionHandler:** Used inside a class to define exactly what to do when a specific exception (like `UserNotFoundException`) occurs.
+3. **ResponseEntity:** Used to return custom error codes (like 404 or 400) along with a structured error message (JSON) to the client.
+
+### ⚙️ Why it matters:
+* **Consistency:** Every error returned by the API follows the same format.
+* **Cleaner Code:** Removes the need for repetitive error-handling logic in business services and controllers.
+* **Security:** Prevents internal stack traces from being exposed to the user, which could reveal sensitive information about the backend.
+
+**Status:** ✅ Day 13 Attendance Marked.

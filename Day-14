@@ -1,0 +1,23 @@
+# Day 14: Bean Validation - Keeping Data Clean
+
+Today I learned how to use the **Bean Validation API** (Standardized via JSR 380) to automatically validate incoming data before it even reaches the business logic.
+
+### ✅ Common Validation Annotations:
+* **@NotNull / @NotEmpty:** Ensures a field isn't null or an empty string.
+* **@Size(min=x, max=y):** Restricts the length of a string or collection.
+* **@Email:** Validates that a string follows a proper email format.
+* **@Min / @Max:** Sets numeric boundaries.
+* **@Past / @Future:** Ensures a date is in the past or the future.
+
+### 🛠️ How it's Triggered:
+By adding the **@Valid** or **@Validated** annotation in the Controller's method signature, 
+Spring Boot automatically checks the object against these rules. If the validation fails, 
+it throws a `MethodArgumentNotValidException`, which we can catch with the Global Exception Handler we built on Day 13!
+
+
+
+### ⚙️ Why it matters:
+It keeps the "junk" out of the database. Instead of writing dozens of `if/else` statements to check if a 
+username is too short or an email is missing an '@', we simply declare the rules once on the Entity or DTO.
+
+**Status:** ✅ Day 14 Attendance Marked.

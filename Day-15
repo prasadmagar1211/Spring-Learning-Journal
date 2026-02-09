@@ -1,0 +1,19 @@
+# Day 15: DTOs - Protecting the Domain Model
+
+Today I learned why we shouldn't use our Database Entities as the response objects in our API. Instead, we use **DTOs**.
+
+### 🛡️ What is a DTO?
+A Data Transfer Object is a simple class used to pass data between the client and the server. It doesn't contain any business logic or database mapping.
+
+### 🚀 Why use DTOs?
+1. **Security:** You can hide sensitive fields (like `password` or `internal_id`) that exist in your Entity but shouldn't be sent to the user.
+2. **Performance:** You can combine data from multiple entities into a single DTO to reduce the number of API calls.
+3. **Decoupling:** If you change your database table structure, you don't have to break the API for the frontend—you just change how the Entity maps to the DTO.
+
+### 🛠️ The Workflow:
+* **Request:** User sends a `UserRegistrationDTO`.
+* **Mapping:** Service converts DTO to a `User` Entity.
+* **Persistence:** Repository saves the Entity.
+* **Response:** Service converts the Entity back to a `UserResponseDTO` (hiding the password).
+
+**Status:** ✅ Day 15 Attendance Marked.

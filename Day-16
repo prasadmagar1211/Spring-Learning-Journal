@@ -1,0 +1,23 @@
+# Day 16: Unit Testing - Ensuring Code Quality
+
+Today I explored how to test my Spring Boot logic in isolation using **JUnit 5** and **Mockito**.
+
+### 🧪 The Power Duo:
+1. **JUnit 5:** The standard framework for writing and running tests in Java.
+2. **Mockito:** A mocking framework that allows us to "fake" dependencies (like Repositories) so we can test a Service in a vacuum.
+
+### 🔍 Key Testing Annotations:
+* **@Test:** Marks a method as a test case.
+* **@ExtendWith(MockitoExtension.class):** Integrates Mockito with JUnit.
+* **@Mock:** Creates a "dummy" version of a class (e.g., a Repository).
+* **@InjectMocks:** Automatically injects the mocks into the class being tested (e.g., the Service).
+
+### 🛠️ The "Given-When-Then" Pattern:
+* **Given:** Set up the test data and mock behavior (e.g., "Given the repository returns a user...").
+* **When:** Call the actual method you are testing.
+* **Then:** Assert that the result is what you expected (e.g., "The user's name should be 'John'").
+
+### ⚙️ Why it matters:
+Testing catches bugs early, documents how the code is supposed to behave, and gives developers the confidence to refactor or add new features without fear of breaking existing functionality.
+
+**Status:** ✅ Day 16 Attendance Marked.

@@ -1,0 +1,20 @@
+# Day 17: Integration Testing - The Full Flow
+
+Today I learned how to run **Integration Tests**, which ensure that all the layers of my Spring Boot application work together correctly.
+
+### 🔌 Testing the Whole Stack
+Unlike Unit Tests (which use Mockito to fake dependencies), Integration Tests start up a part of the Spring Application Context.
+
+1. **@SpringBootTest:** This annotation tells Spring to bootstrap the entire application context for the test.
+2. **@AutoConfigureMockMvc:** This allows us to test our Controllers by sending "real" HTTP requests without actually starting a full server.
+3. **Testcontainers / H2:** Usually, we use an in-memory database (like H2) or a lightweight Docker container (Testcontainers) so we don't mess up our production data.
+
+### 🛠️ Using MockMvc:
+Instead of calling a method, we use `mockMvc.perform(get("/api/users/1"))`.
+* We check the **Status Code** (e.g., `.andExpect(status().isOk())`).
+* We check the **JSON Body** (e.g., `.andExpect(jsonPath("$.name").value("John"))`).
+
+### ⚙️ Why it matters:
+It catches "wiring" issues—like a missing bean, a broken SQL query, or a misconfigured URL mapping—that Unit Tests would completely miss. It’s the final safety net before code goes to production.
+
+**Status:** ✅ Day 17 Attendance Marked.

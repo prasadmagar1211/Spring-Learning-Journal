@@ -1,0 +1,20 @@
+# Day 18: Spring Security - The App's Bouncer
+
+Today I started exploring **Spring Security**, the powerful framework that handles Authentication (who are you?) and Authorization (what are you allowed to do?).
+
+### 🛡️ Core Security Concepts
+By simply adding the `spring-boot-starter-security` dependency, Spring Boot immediately locks down all endpoints with a default login page.
+
+1. **Authentication:** Verifying the identity of a user (Login).
+2. **Authorization:** Giving a user permission to access specific resources (Roles/Permissions).
+3. **Security Filter Chain:** A series of "filters" that every request must pass through before reaching my Controller.
+
+### 🔑 The Key Players:
+* **UserDetailsService:** The interface Spring uses to load user-specific data from a database.
+* **PasswordEncoder:** A tool (like BCrypt) that ensures we never store plain-text passwords.
+* **SecurityFilterChain:** A bean where we define which URLs are public (like `/home`) and which require a login (like `/admin`).
+
+### ⚙️ Why it matters:
+In the modern web, security isn't an "extra"—it's a requirement. Spring Security protects against common attacks like Session Fixation, Clickjacking, and Cross-Site Request Forgery (CSRF) right out of the box.
+
+**Status:** ✅ Day 18 Attendance Marked.

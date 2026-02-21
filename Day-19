@@ -1,0 +1,21 @@
+# Day 19: Custom Authentication - Using a Database
+
+Today I moved beyond the default "user/password" in the console and learned how to connect Spring Security to a real database.
+
+### 🗄️ The Guest List Strategy
+To let users sign up and log in using our database, we need to implement a specific set of Spring interfaces.
+
+1. **UserDetails:** A core interface that represents a user's information (username, password, and authorities/roles).
+2. **UserDetailsService:** The service that Spring calls to "find" a user in the database by their username.
+3. **BCryptPasswordEncoder:** A strong hashing function used to store passwords securely. **Never** store plain-text passwords!
+
+### 🛠️ The Authentication Flow:
+* **The Request:** A user submits a login form.
+* **The Lookup:** Spring calls `loadUserByUsername()`.
+* **The Verification:** The `AuthenticationManager` compares the submitted password with the hashed password in the database.
+* **The Session:** If they match, a `SecurityContext` is created for that user.
+
+### ⚙️ Why it matters:
+This is the standard way to build a real application where users can register, change passwords, and have different levels of access (like `ROLE_USER` vs. `ROLE_ADMIN`).
+
+**Status:** ✅ Day 19 Attendance Marked.

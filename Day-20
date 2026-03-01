@@ -1,0 +1,18 @@
+# Day 20: Roles and Authorities - Fine-Grained Security
+
+Today I learned how to distinguish between different types of users using **Roles** and **Authorities** in Spring Security.
+
+### 🎖️ Roles vs. Authorities
+* **Authority:** A single, specific permission (e.g., `READ_PRIVILEGE`, `DELETE_USER`).
+* **Role:** A group of permissions (e.g., `ROLE_USER`, `ROLE_ADMIN`). In Spring, a role is essentially an authority prefixed with `ROLE_`.
+
+### 🛡️ How to Restrict Access:
+1. **URL-Based:** In the `SecurityFilterChain`, we can use `.requestMatchers("/admin/**").hasRole("ADMIN")`.
+2. **Method-Level:** By using the `@PreAuthorize` annotation on a Service method, we can stop unauthorized calls before the code even runs: 
+   * `@PreAuthorize("hasRole('ADMIN')")`
+   * `@PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")`
+
+### ⚙️ Why it matters:
+It allows us to build complex systems where different users have different capabilities. A "Manager" might be able to approve reports, while a "Clerk" can only view them. This is the heart of multi-user application logic.
+
+**Status:** ✅ Day 20 Attendance Marked.

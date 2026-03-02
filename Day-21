@@ -1,0 +1,22 @@
+# Day 21: JWT - Secure, Stateless Authentication
+
+Today I learned about **JWT (JSON Web Tokens)** and how they allow a server to verify a user without needing to store session data in memory.
+
+### 🎫 What is a JWT?
+A JWT is a compact, URL-safe string that contains "claims." It is made of three parts:
+1. **Header:** The algorithm used (e.g., HS256).
+2. **Payload:** The data (e.g., username, roles, expiration date).
+3. **Signature:** A hash that proves the token hasn't been tampered with.
+
+### ⚙️ The JWT Flow:
+* **Login:** The user sends credentials. If valid, the server generates a JWT and sends it back.
+* **Storage:** The client (browser/mobile) stores the token (usually in local storage).
+* **Requests:** The client sends the token in the `Authorization` header for every request: `Bearer <token>`.
+* **Validation:** The server checks the signature. If it's valid, the user is authenticated!
+
+### 🛡️ Why it matters:
+* **Statelessness:** The server doesn't need to keep a database of active sessions. This makes the app much easier to scale.
+* **Mobile Friendly:** JWTs work perfectly across web, iOS, and Android without worrying about cookie management.
+* **Decoupling:** You can have one server handle login and a completely different server handle data, as long as they both share the "Secret Key."
+
+**Status:** ✅ Day 21 Attendance Marked.

@@ -1,0 +1,21 @@
+# Day 22: Spring Boot DevTools - Stop Restarting!
+
+Today I learned how to speed up my development workflow using **Spring Boot DevTools**.
+
+### ⚡ The "Automatic Restart" Feature
+Normally, every time you change a single line of Java code, you have to stop the app and click "Run" again. DevTools fixes this:
+* Whenever you save a file, DevTools detects the change and **restarts the application automatically** in the background.
+* It uses a "smart restart" strategy that only reloads your code (not the entire library stack), making it 10x faster than a full manual restart.
+
+### 🌐 LiveReload
+DevTools includes an embedded **LiveReload server**. If you are building a web interface (using Thymeleaf or HTML), the browser will automatically refresh the page the moment you save your code. No more hitting `F5`!
+
+### 🛠️ How to enable it:
+Just add this one dependency to your `pom.xml`:
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <optional>true</optional>
+</dependency>
+Day 22 - Attendance Marked !
